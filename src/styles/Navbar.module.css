@@ -1,3 +1,91 @@
-.container {
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+.container {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    align-items: center;
+    background-color: #ff3014;
+    justify-content: space-around;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.containerNumber {
+    width: 14%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.containerInfoNumber {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerInfoNumber>span {
+    color: #fff;
+}
+
+.containerInfoNumber>span:nth-child(1) {
+    font-size: 1.1rem;
+}
+
+.containerInfoNumber>span:nth-child(2) {
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 1.7rem;
+    letter-spacing: 3px;
+}
+
+.containerNumberIcon {
+    width: 23%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.containerNumberIcon>.iconPhone {
+    max-width: 70%;
+}
+
+.menuNav {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuNav>a {
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+
+.containerCart {
+    width: 4%;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.containerCart>div {
+    top: -14px;
+    left: -10px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    color: #ff3014;
+    font-weight: 800;
+    font-size: 1.1rem;
+    position: absolute;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
 }
