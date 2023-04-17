@@ -1,5 +1,7 @@
 import Image from 'next/legacy/image';
 import styles from '../src/styles/carousel.module.css'
+import { MdArrowBackIosNew } from 'react-icons/md';
+import { MdArrowForwardIos } from 'react-icons/md';
 import { useState } from 'react';
 
 const Carousel = () => {
@@ -13,18 +15,18 @@ const Carousel = () => {
     ]
 
     function handleArrow(direction) {
-        if (direction === "1") {
-            setIndex(index !== 0 ? index - 1 : 2)
-        }
         if (direction === "r") {
             setIndex(index !== 2 ? index + 1 : 0)
+        }
+        if (direction === "1") {
+            setIndex(index !== 0 ? index - 1 : 2)
         }
     }
 
     return (
         <div className={styles.container}>
             <div className={styles.arrowContainer} style={{ left: 0 }}>
-                <Image className={styles.arrow} src="/image/arrowLeft.png" alt="" layout='fill' objectFit='contain' onClick={() => handleArrow("1")} />
+                <MdArrowBackIosNew onClick={() => handleArrow("1")} />
             </div>
             <div className={styles.wrapper} style={{ transform: `translateX(${-100 * index}vw)` }}>
                 {
@@ -36,7 +38,7 @@ const Carousel = () => {
                 }
             </div>
             <div className={styles.arrowContainer} style={{ right: 0 }}>
-                <Image className={styles.arrow} src="/image/arrowRight.png" alt="" layout='fill' objectFit='contain' onClick={() => handleArrow("r")} />
+                <MdArrowForwardIos onClick={() => handleArrow("r")} />
             </div>
         </div>
     )

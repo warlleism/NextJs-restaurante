@@ -11,10 +11,13 @@
     top: 0;
     bottom: 0;
     z-index: 2;
-    width: 400px;
+    color: red;
+    width: 200px;
     margin: auto;
     display: flex;
     height: 200px;
+    cursor: pointer;
+    font-size: 6rem;
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -42,6 +45,7 @@
 }
 
 .img {
+    max-width: 100%;
     margin: 0 auto;
     object-fit: contain;
 }
