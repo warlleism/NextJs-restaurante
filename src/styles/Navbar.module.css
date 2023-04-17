@@ -5,21 +5,21 @@
     width: 100%;
     height: 120px;
     align-items: center;
-    background-color: #ff3014;
-    justify-content: space-around;
+    background-color: #FF5722;
     font-family: 'Lato', sans-serif;
-
 }
 
 .containerNumber {
-    width: 14%;
+    width: 25%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .containerInfoNumber {
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,51 +41,86 @@
 }
 
 .containerNumberIcon {
-    width: 23%;
-    height: 50%;
+    width: 60px;
+    height: 60px;
     display: flex;
-    align-items: center;
+    margin-right: 10px;
     border-radius: 100%;
+    outline-offset: 2px;
+    align-items: center;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
+    outline: 2px solid rgb(253, 165, 1);
+    background-color: rgb(252, 252, 252);
 }
 
 .containerNumberIcon>.iconPhone {
-    max-width: 70%;
+    width: 40px;
+    height: 40px;
 }
 
 .menuNav {
-    width: 40%;
+    width: 55%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .menuNav>a {
     color: #fff;
     font-size: 1.5rem;
-    letter-spacing: 5px;
+    position: relative;
+    letter-spacing: 2px;
     text-decoration: none;
 }
 
+.menuNav>a::after {
+    left: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    bottom: -5px;
+    position: absolute;
+    background: #fff;
+    transition: .5s ease-in-out;
+}
+
+.menuNav>a:hover::after {
+    content: '';
+    width: 100%;
+}
+
 .containerCart {
-    width: 4%;
+    width: 20%;
+    height: 100%;
+    display: flex;
     cursor: pointer;
     position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerCart>.containerCartInfo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 
 }
 
-.containerCart>div {
-    top: -14px;
-    left: -10px;
+.containerCart>.containerCartInfo>div {
+    top: 0;
+    left: 10px;
     width: 25px;
     height: 25px;
     display: flex;
-    color: #ff3014;
+    color: #fff;
     font-weight: 800;
-    font-size: 1.1rem;
     position: absolute;
-    border-radius: 100%;
     align-items: center;
+    border-radius: 100px;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(117, 10, 2);
 }

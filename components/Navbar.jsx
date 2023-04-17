@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <div className={styles.container}>
             <div className={styles.containerNumber}>
-                <div className={styles.containerNumberIcon}> 
+                <div className={styles.containerNumberIcon}>
                     <img className={styles.iconPhone} src="/image/phone.png" alt="" />
                 </div>
                 <div className={styles.containerInfoNumber}>
@@ -22,8 +22,10 @@ const Navbar = () => {
                 <a href="">Contato</a>
             </div>
             <div className={styles.containerCart}>
-                <img src="/image/cart.png" alt="" />
-                <div>2</div>
+                <div className={styles.containerCartInfo}>
+                    <img src="/image/cart.png" alt="" />
+                    <div>2</div>
+                </div>
             </div>
         </div>
     )
