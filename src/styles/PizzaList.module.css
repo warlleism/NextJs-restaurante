@@ -6,13 +6,13 @@
 }
 
 .title {
-    margin: 60px 0;
+    margin: 60px 0 0 0;
     color: #ff5722;
 }
 
 .desc {
     font-size: 26px;
-    color: #5e1600;
+    color: #000000;
     width: 70%;
     margin: 30px 0 80px;
     letter-spacing: 2px;

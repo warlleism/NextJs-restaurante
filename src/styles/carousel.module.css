@@ -11,7 +11,6 @@
     top: 0;
     bottom: 0;
     z-index: 2;
-    color: red;
     width: 200px;
     margin: auto;
     display: flex;
@@ -21,6 +20,7 @@
     position: absolute;
     align-items: center;
     justify-content: center;
+    color: rgb(255, 255, 255);
 }
 
 .arrow {

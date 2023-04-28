@@ -42,7 +42,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className={styles.menuNav}>
-                <a href="">início</a>
+                <a href="http://localhost:3000/">início</a>
                 <a href="">Produtos</a>
                 <a href="">Menu</a>
                 <a href="">Eventos</a>

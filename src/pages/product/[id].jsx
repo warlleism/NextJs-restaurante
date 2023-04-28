@@ -4,17 +4,7 @@ import { useState } from "react";
 
 const Product = () => {
 
-    const [selectedIngredients, setSelectedIngredients] = useState([]);
-    const [extraIngredient, setExtraIngredient] = useState("");
-
-    const handleIngredientChange = (e) => {
-        const { value, checked } = e.target;
-        if (checked) {
-            setSelectedIngredients((prev) => [...prev, value]);
-        } else {
-            setSelectedIngredients((prev) => prev.filter((i) => i !== value));
-        }
-    };
+    const [color, setColor] = useState(1)
 
     const pizza = {
         id: 1,
@@ -37,15 +27,15 @@ const Product = () => {
                 <div className={styles.price}>{pizza.price}</div>
                 <div className={styles.desc}>{pizza.desc}</div>
                 <div className={styles.container_size}>
-                    <div className={styles.pizza_size}>
+                    <div className={styles.pizza_size} style={{ background: color == 1 ? '#ffcc6f' : '#ffa60015' }} onClick={() => setColor(1)}>
                         <Image className={styles.image_size_1} src={'/image/pizza-size-1.png'} layout="fill" />
                         <span>Pequena</span>
                     </div>
-                    <div className={styles.pizza_size}>
+                    <div className={styles.pizza_size} style={{ background: color == 2 ? '#ffcc6f' : '#ffa60015' }} onClick={() => setColor(2)}>
                         <Image className={styles.image_size_2} src={'/image/pizza-size-1.png'} layout="fill" />
                         <span>Média</span>
                     </div>
-                    <div className={styles.pizza_size}>
+                    <div className={styles.pizza_size} style={{ background: color == 3 ? '#ffcc6f' : '#ffa60015' }} onClick={() => setColor(3)}>
                         <Image className={styles.image_size_3} src={'/image/pizza-size-1.png'} layout="fill" />
                         <span>Grande</span>
                     </div>
@@ -53,23 +43,23 @@ const Product = () => {
                 <div className={styles.containerSelect}>
                     <h2>Escolha ingredientes adicionais</h2>
                     <div className={styles.containerInputs}>
+
                         <div>
                             <input
                                 type="checkbox"
                                 id="ingredient1"
                                 name="ingredient1"
                                 value="ingredient1"
-                                onChange={handleIngredientChange}
                             />
                             <label htmlFor="ingredient1">Borda de catupiri</label>
                         </div>
+
                         <div>
                             <input
                                 type="checkbox"
                                 id="ingredient2"
                                 name="ingredient2"
                                 value="ingredient2"
-                                onChange={handleIngredientChange}
                             />
                             <label htmlFor="ingredient2">Muçarela extra</label>
                         </div>
@@ -78,10 +68,8 @@ const Product = () => {
                                 type="checkbox"
                                 id="extraIngredient"
                                 name="extraIngredient"
-                                value={extraIngredient}
-                                onChange={handleIngredientChange}
                             />
-                            <label htmlFor="extraIngredient">cheddar extra</label>
+                            <label htmlFor="extraIngredient">Cheddar extra</label>
                         </div>
                     </div>
                 </div>
@@ -92,7 +80,7 @@ const Product = () => {
                         id="extraIngredient"
                         name="extraIngredient"
                     />
-                    <div>Carrinho</div>
+                    <a href="http://localhost:3000/cart">Carrinho</a>
                 </div>
 
             </div>
